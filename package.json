@@ -1,0 +1,32 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "homework assignment using mysql, node, express, handlebars, and orm",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vguercio10/burger.git"
+  },
+  "keywords": [
+    "burger",
+    "mysql",
+    "node",
+    "express",
+    "handlebars",
+    "orm"
+  ],
+  "author": "vanessa guercio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vguercio10/burger/issues"
+  },
+  "homepage": "https://github.com/vguercio10/burger#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mysql": "^2.16.0"
+  }
+}
