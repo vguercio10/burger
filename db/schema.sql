@@ -1,4 +1,4 @@
--- Going to created burgers db
+-- This creates burgers database(code used in DBeaver)--
 CREATE DATABASE burgers_db;
 
 USE burgers_db;
