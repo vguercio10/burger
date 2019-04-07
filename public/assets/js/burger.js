@@ -21,4 +21,21 @@ $(document).ready(function (){
         );
       });
     // console.log("hello");
+    $(".devourbutton").on("click", function(event) {
+      var newDevoured = $(this).data("devoured");
+      var id = $(this).data("burgerid");
+      var newDevouredState = {
+        devoured: newDevoured
+      };
+      $.ajax("/api/burgers/" + id, {
+        type: "PUT",
+        data: newDevouredState
+      }).then(
+        function() {
+          console.log("burgerdevoured");
+          location.reload();
+        }
+      )
+    })
+    
 })

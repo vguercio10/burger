@@ -4,7 +4,7 @@ var express = require("express");
 var router = express.Router();
 
 // Importing the model burger.js file, its to use its database functions.
-var burger = require("../models/burger");
+var burger = require("../models/burger.js");
 
 // Create routes and set up logic in the routes where required.
 router.get("/", function(req, res) {
@@ -23,7 +23,21 @@ router.post("/api/newburger", function(req, res) {
         res.json(data);
     })
 })
+router.put("/api/burgers/:id", function(req, res) {
+    var condition = "id = " + req.params.id;
+  
+    console.log("condition", condition);
 
+    burger.updateOne(
+    "devoured", true
+, condition, function(result) {
+    if (result.changedRows == 0) {
+        return res.status(404).end();
+    } else {
+        res.status(200).end();
+    }
+  });
+});
 
 
 
