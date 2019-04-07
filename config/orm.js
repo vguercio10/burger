@@ -11,6 +11,16 @@ var orm = {
         }
         cb(result);
       });
+    },
+    insertOne: function(tableInput, burger_name, cb) {
+      var queryString = "INSERT INTO `burgers` (burger_name, devoured) VALUES (?, ?);";
+      var query = connection.query(queryString, [burger_name, false], function(err, result) {
+        if(err) {
+          throw err;
+        }
+        cb(result);
+      });
+      console.log("generated query", query.sql);
     }
 }
 

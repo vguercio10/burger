@@ -6,6 +6,11 @@ var burger = {
         orm.selectAll("burgers", function(res) {
             cb(res);
         });
+    },
+    insertOne: function(burger_name, cb) {
+        orm.insertOne(`burgers`, burger_name, function(res) {
+            cb(res);
+        })
     }
 }
 // Export the database functions for the controller (burgers_controllers.js)
