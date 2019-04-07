@@ -12,9 +12,9 @@ var orm = {
         cb(result);
       });
     },
-    insertOne: function(tableInput, burger_name, cb) {
+    insertOne: function(tableInput, val, cb) {
       var queryString = "INSERT INTO `burgers` (burger_name, devoured) VALUES (?, ?);";
-      var query = connection.query(queryString, [burger_name, false], function(err, result) {
+      var query = connection.query(queryString, [val, false], function(err, result) {
         if(err) {
           throw err;
         }
