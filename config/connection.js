@@ -17,7 +17,7 @@ var connection = mysql.createConnection({
           return;
       }
     //   if connection this will print with connection threadID
-      console.log("connected as id " + connections.threadID);
+      console.log("connected as id " + connection.threadID);
   });
 // This is exporting the connection for ORM use
   module.exports = connection;
