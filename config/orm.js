@@ -1,0 +1,18 @@
+// This is importing the mysql connection
+var connection = require("../config/connection");
+
+var orm = {
+    // This is going to retrive the data from the table
+    selectAll: function(tableInput, cb) {
+      var queryString = "SELECT * FROM " + tableInput + ";";
+      connection.query(queryString, function(err, result) {
+        if (err) {
+          throw err;
+        }
+        cb(result);
+      });
+    }
+}
+
+// Export the orm object for the model (burger.js).
+module.exports = orm;
