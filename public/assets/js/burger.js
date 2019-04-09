@@ -21,7 +21,7 @@ $(document).ready(function (){
         );
       });
     // console.log("hello");
-    $(".devourbutton").on("click", function(event) {
+    $(".btn").on("click", function(event) {
       var newDevoured = $(this).data("devoured");
       var id = $(this).data("burgerid");
       var newDevouredState = {
