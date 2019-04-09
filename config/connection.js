@@ -5,10 +5,11 @@ if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL)
 } else {
   connection = mysql.createConnection({
-    host: "jsftj8ez0cevjz8v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com	",
-    user: "q5oaewize9g017ct",
-    password: "cilremxkdiqmwav7",
-    database: "ueuechroeq7lg5nb"
+    host: "localhost",
+    port: 8889,
+    user: "root",
+    password: "root",
+    database: "burgers_db"
   })
 }
 //   This code is making the connection
@@ -19,7 +20,7 @@ if (process.env.JAWSDB_URL) {
           return;
       }
     //   if connection this will print with connection threadID
-      console.log("connected as id " + connection.threadID);
+      console.log("connected as id " + connection.threadId);
   });
 // This is exporting the connection for ORM use
   module.exports = connection;
