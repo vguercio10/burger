@@ -21,7 +21,9 @@ $(document).ready(function (){
         );
       });
     // console.log("hello");
-    $(".btn").on("click", function(event) {
+    $("#switch").on("click", function(event) {
+      event.preventDefault();
+      
       var newDevoured = $(this).data("devoured");
       var id = $(this).data("burgerid");
       var newDevouredState = {
